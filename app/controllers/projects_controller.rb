@@ -14,6 +14,11 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def show
+    @project = Project.includes(:comments).find(params[:id])
+    @new_comment = Comment.new(project: @project)
+  end
+
   private
 
   def project_params
