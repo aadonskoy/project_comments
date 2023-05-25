@@ -5,3 +5,15 @@
     <%= @project.description %>
   </div>
 </div>
+
+<div id="comments">
+  <h2 class="font-bold text-2xl">Comments</h2>
+
+  <%= render @project.comments %>
+
+  <div class="mt-4">
+    <%= render "comments/form", project: @project, comment: @new_comment %>
+  </div>
+</div>
+
+<%= link_to "To Projects List", projects_path %>
