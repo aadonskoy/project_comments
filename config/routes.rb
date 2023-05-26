@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "projects#index"
 
-  resources :projects do
+  resources :projects, except: [ :new, :destroy ] do
+    patch :update_status, on: :member
+
     resources :comments, only: :create
   end
 end

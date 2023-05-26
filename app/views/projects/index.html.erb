@@ -1,14 +1,12 @@
 <div id="projects">
   <h1 class="font-bold text-2xl">Projects</h1>
 
-  <div class="px-5">
+  <div class="px-3 mb-3 mt-3">
     <%= render @projects %>
   </div>
 </div>
 
 <div id="new-project">
-  <h1 class="font-bold text-lg mb-7">New Project</h1>
-  <div class="mt-4">
-    <%= render "form", project: @new_project %>
-  </div>
+  <h1 class="font-bold text-lg mt-6">New Project</h1>
+  <%= render "form", project: @new_project %>
 </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_25_113305) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_26_055818) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,6 +29,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_25_113305) do
     t.boolean "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "state", limit: 100, default: "not_started", null: false
+    t.index ["state"], name: "index_projects_on_state"
   end
 
   add_foreign_key "comments", "projects"

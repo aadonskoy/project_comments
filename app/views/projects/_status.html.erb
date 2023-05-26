@@ -1,0 +1,5 @@
+<%= form_with(model: project, url: update_status_project_path(project)) do |form| %>
+    <% project.events_names.each do |event_name| %>
+      <%= form.submit event_name.to_s.humanize, name: "event[#{event_name}]", class: 'btn bg-orange-300' %>
+    <% end %>
+<% end %>

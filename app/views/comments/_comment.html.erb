@@ -1,5 +1,5 @@
-<div class="block mb-2">
-  <p><%= comment.username %>:</p>
+<div class="border-l-4 border-sky-600 mb-3 mt-3 pl-3">
+  <span class="text-sm font-bold bg-yellow-100"><%= comment.username %>:</span>
   <p><%= comment.text %></p>
-  <p><i><%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i></p>
+  <span class="text-sm italic"><%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %></span>
 </div>
